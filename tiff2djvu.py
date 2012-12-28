@@ -113,15 +113,16 @@ class Base:
 		md = gtk.MessageDialog(None,gtk.DIALOG_DESTROY_WITH_PARENT, gtk.MESSAGE_INFO,gtk.BUTTONS_CLOSE, "Successfully Converted")
 		md.run()		
 		#Displaying successful message
-		self.md.destroy()
+		md.destroy()
 		
 	def __init__(self):
 	        #Main function
 		self.flag=0
 		self.window = gtk.Window()
 		self.window.set_position(gtk.WIN_POS_CENTER)
-		self.windowx,self.windowy = self.window.get_position()		
-		self.windowheight,self.windowwidth = self.window.get_size()				
+		self.windowx,self.windowy = self.window.get_position()
+		self.window.maximize()
+		self.windowheight,self.windowwidth = self.window.get_size()		
 		self.window.show()
 		self.fixed = gtk.Fixed()
 		self.window.connect("destroy",self.destroy)
@@ -150,3 +151,4 @@ class Base:
 if __name__ == "__main__":
 	base= Base()
 	base.main()
+
