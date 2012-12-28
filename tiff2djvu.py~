@@ -121,6 +121,7 @@ class Base:
 		self.window = gtk.Window()
 		self.window.set_position(gtk.WIN_POS_CENTER)
 		self.windowx,self.windowy = self.window.get_position()
+		self.window.maximize()
 		self.windowheight,self.windowwidth = self.window.get_size()		
 		self.window.show()
 		self.fixed = gtk.Fixed()
