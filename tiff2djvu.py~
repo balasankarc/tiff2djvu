@@ -1,21 +1,3 @@
-#! /usr/bin/env python
-#
-# tiff2djvu - A software to merge multiple tiff images to a single djvu file
-#       
-# Copyright (c) 2012
-#	 Balasankar C <c.balasankar@gmail.com>
-#
-#       
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 3 of the License, or
-# (at your option) any later version.
-#       
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
 import pygtk
 import gtk
 import sys
