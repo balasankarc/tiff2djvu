@@ -49,6 +49,7 @@ class Base:
         	filter = gtk.FileFilter()
         	filter.set_name("Tiff Files")									
         	filter.add_pattern("*.tif")
+        	filter.add_pattern("*.tiff")
         	dialog.add_filter(filter)
 		response = dialog.run()
 		if response == gtk.RESPONSE_OK:
