@@ -46,8 +46,6 @@ class Base:
 		response = dialog1.run()
 		self.outputfilename=dialog1.get_filename()
 		self.out2 = self.outputfilename.split('/')[-1]
-		print self.out2
-		print self.outputfilename
 		dialog1.destroy()
 		
 	#Selecting input files	
