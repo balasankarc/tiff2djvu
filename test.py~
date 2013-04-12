@@ -1,0 +1,2 @@
+str = "/home/balu/desktop/asdf.djvu"
+str.split('/')[-1]
