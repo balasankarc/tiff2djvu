@@ -79,7 +79,7 @@ class Base:
 		j=100
 		for p in self.filelist:		
 			print p
-			cmnd = "tiff2pdf -o tmp/"+str(j)+self.out2+"_temp.pdf "+ p			
+			cmnd = "tiff2pdf -o 'tmp/"+str(j)+self.out2+"_temp.pdf' '"+ p +"'"			
 			flag=os.system(cmnd)
 			j=j+1
 		md1= gtk.MessageDialog(None,gtk.DIALOG_DESTROY_WITH_PARENT, gtk.MESSAGE_ERROR,gtk.BUTTONS_CLOSE, "Error while creating pdf")
@@ -89,7 +89,7 @@ class Base:
 			return
                 #Merging pdf files to a single pdf files
                 md1= gtk.MessageDialog(None,gtk.DIALOG_DESTROY_WITH_PARENT, gtk.MESSAGE_ERROR,gtk.BUTTONS_CLOSE, "Error while merging pdf")
-		cmnd2="pdftk tmp/*.pdf cat output tmp/"+self.out2+"_file_merged.pdf"		
+		cmnd2="pdftk tmp/*.pdf cat output 'tmp/"+self.out2+"_file_merged.pdf'"		
 		flag=os.system(cmnd2)
 		if flag!=0:
 			md1.run()
@@ -97,7 +97,7 @@ class Base:
 			return
                 #Converting pdf file to djvu file
                 md1= gtk.MessageDialog(None,gtk.DIALOG_DESTROY_WITH_PARENT, gtk.MESSAGE_ERROR,gtk.BUTTONS_CLOSE, "Error while creating djvu")			
-		cmnd3="pdf2djvu -o "+self.outputfilename+".djvu tmp/"+self.out2+"_file_merged.pdf"		
+		cmnd3="pdf2djvu -o "+self.outputfilename+".djvu 'tmp/"+self.out2+"_file_merged.pdf'"		
 		flag=os.system(cmnd3)
 		if flag!=0:
 			md1.run()
